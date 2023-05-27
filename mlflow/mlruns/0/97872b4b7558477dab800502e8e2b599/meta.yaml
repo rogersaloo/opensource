@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Aloo/Documents/MACHINE_LEARNING/open_source_learning/mlflow/mlruns/0/97872b4b7558477dab800502e8e2b599/artifacts
+end_time: 1685147676866
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 97872b4b7558477dab800502e8e2b599
+run_name: awesome-squid-534
+run_uuid: 97872b4b7558477dab800502e8e2b599
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685147673665
+status: 3
+tags: []
+user_id: Aloo

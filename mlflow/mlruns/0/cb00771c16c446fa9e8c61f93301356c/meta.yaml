@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Aloo/Documents/MACHINE_LEARNING/open_source_learning/mlflow/mlruns/0/cb00771c16c446fa9e8c61f93301356c/artifacts
+end_time: 1685139769967
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cb00771c16c446fa9e8c61f93301356c
+run_name: intelligent-lynx-520
+run_uuid: cb00771c16c446fa9e8c61f93301356c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685139766244
+status: 3
+tags: []
+user_id: Aloo
