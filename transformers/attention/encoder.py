@@ -12,6 +12,12 @@ RUN_EXAMPLES = True
 
     
 class Encoder(nn.Module):
+    """class creating the generic encorder
+
+    Args:
+        N (_type_): the depth of the attention decorder
+        layer: implementation of an individual attention layer
+    """
     def __init__(self, layer, N):
         super(Encoder, self).__init__()
         self.layers = clones(layer, N)
@@ -25,6 +31,13 @@ class Encoder(nn.Module):
 
 
 class EncoderLayer(nn.Module):
+    """Encorder layer with a self attention, feedforward and dropout
+
+    Args:
+        size (_type_): size of the input embedding
+        self_attention: Implementation of the self attention module 
+        feed_forward: feed forward network ro concatinate the encoder attention output
+    """
     def __init__(self, size, self_attn, feed_forward, dropout):
         super(EncoderLayer, self).__init__()
         self.self_attn = self_attn

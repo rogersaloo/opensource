@@ -2,6 +2,7 @@ import torch.nn as nn
 
 
 class EncoderDecorder:
+    """Class combining the encorder and the decorder"""
     def __init__(self, encoder, decorder, src_embed, tgt_embed, generator) -> None:
         super(EncoderDecorder, self).__init__
         self.encoder = encoder
@@ -24,6 +25,10 @@ class EncoderDecorder:
     
 
 class Generator(nn.Module):
+    """Contains the last layer outputed to concatinate the decorder output
+    Args:
+        d_model (_type_): The instantiated model
+    """
     def __init__(self, d_model, vocab) -> None:
         super(Generator, self).__init__()
         self.proj = nn.Linear(d_model, vocab)

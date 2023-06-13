@@ -1,7 +1,7 @@
 import torch
 import math
 import torch.nn as nn
-from torch.nn.fundtional import log_softmax, pad
+from torch.nn.functional import log_softmax, pad
 import copy
 import copy
 import warnings
@@ -15,6 +15,11 @@ def clones(module, N):
     
 
 class LayerNorm(nn.Module):
+    """Create a layer normalization used in the tranfomer encoder and decorder
+
+    Args:
+        features (_type_): number of features default: 512 
+    """
     def __init__(self, features, eps=1e-6):
         super(LayerNorm, self).__init__()
         self.a_2 = nn.Parameter(torch.ones(features))
@@ -28,6 +33,11 @@ class LayerNorm(nn.Module):
     
 
 class SublayerConnection(nn.Module):
+    """Residual connection for the ecoder decorder bypass
+
+    Args:
+        dropout  (_type_): size of the dropout layer needed
+    """
     def __init__(self, size, dropout):
         super(SublayerConnection, self).__init__()
         self.norm = LayerNorm(size)
@@ -39,6 +49,7 @@ class SublayerConnection(nn.Module):
 
 def attention(query, key, value, mask=None, dropout=None):
     """Compute scaled dot matrix attention
+    The entry contains three values the query, key and value
 
     Args:
         query (_type_): _description_
