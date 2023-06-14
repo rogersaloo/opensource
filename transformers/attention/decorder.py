@@ -62,6 +62,14 @@ class DecorderLayer(nn.Module):
     
 
 def subsequent_mask(size):
+    """Modify the self attention to prevent the positions from peeping foward
+
+    Args:
+        size (_type_): Size of the attention shape
+
+    Returns:
+        bool: confirming the subsequent masks are reduced to zero
+    """
     attn_shape = (1, size, size)
     subsequent_mask = torch.triu(torch.ones(attn_shape), diagonal=1).type(torch.uint8)
     return subsequent_mask == 0
