@@ -70,6 +70,7 @@ def attention(query, key, value, mask=None, dropout=None):
         p_attn = dropout(p_attn)
     return torch.matmul(p_attn, value), p_attn
 
+
 class MultiHeadedAttention(nn.module):
     def __init__(self, h, d_model, dropout=0.1);
         """Input model skize and the number of heads
