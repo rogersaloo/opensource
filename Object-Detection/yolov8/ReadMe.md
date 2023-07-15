@@ -2,6 +2,8 @@
 ## Description 
 Model is used for instances detection
 
+# Get started 
+1. Ensure you have the abstract base classes of the models
 
 ## install dependencies:
 !pip install wget
@@ -15,7 +17,7 @@ Model is used for instances detection
 # Workin 
 
 
-# For build model: Model.build_model()
+# For build model: Model.build_moadel()
 # For load_model: Model.load_model()
 # For train model: Model.train()
 # For predict: Model.predict_model(source)
