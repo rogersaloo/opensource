@@ -1,0 +1,14 @@
+{
+    "weights": "./pretrained_weight/model_weight.pt",
+    "source": "https://ultralytics.com/images/bus.jpg",
+    "data": "data.yaml",
+    
+    "imgsz":640,
+
+    "epochs":1,
+
+    "version":"s",
+    "save": true,
+    "device":0
+    
+}
