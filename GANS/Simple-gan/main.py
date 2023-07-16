@@ -9,6 +9,9 @@ from torch.utils.tensorboard import SummaryWriter
 
 
 class Discriminator(nn.module):
+    """Simple GAN discriminator on the generator output
+
+    """
     def __init__(self, img_dim):
         super().__init__()
         self.disc = nn.Sequential(
@@ -23,6 +26,9 @@ class Discriminator(nn.module):
     
 
 class Generator(nn.module):
+    """Simple GAN generator based on the the random noise
+
+    """
     def __init__(self, z_dim, img_dim):
         super.__init__()
         self.gen = nn.Sequential(
@@ -106,3 +112,4 @@ for epoch in range(num_epochs):
                 )
 
                 step += 1
+                
