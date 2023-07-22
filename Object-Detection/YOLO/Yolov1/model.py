@@ -35,9 +35,9 @@ class CNNBlock(nn.Module):
         return self.leakyrelu(self.batchnorm(self.conv(x)))
     
 
-class Yolov1(nn.Module):
+class YoloV1(nn.Module):
     def __init__(self, in_channels=3, **kwargs):
-        super(Yolov1, self).__init__()
+        super(YoloV1, self).__init__()
         self.architectures = architecture_config
         self.inchannels = in_channels
         self.darknet = self._create_conv_layers(self.architectures)
