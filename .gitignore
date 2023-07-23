@@ -1,6 +1,7 @@
 *.idea/
 *venv
 *venv_odet
+__pycache__
 =======
 Data
 ========
